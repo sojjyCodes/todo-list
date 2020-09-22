@@ -66,6 +66,26 @@ class App extends React.Component {
             });
     }
 
+    handleDelete(e) {
+        e.preventDefault();
+        console.log("ITEM: ", this.state.activeItem);
+        let url = "http://127.0.0.1:8000/task-create/";
+        fetch(url, {
+            method: "DELETE",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(this.state.activeItem),
+        })
+            .then((response) => {
+                this.fetchTasks();
+                this.setState({});
+            })
+            .catch(function (error) {
+                console.log("ERROR:", error);
+            });
+    }
+
     render() {
         let tasks = this.state.todoList;
         return (
