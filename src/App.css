@@ -32,3 +32,7 @@
 .flex-wrapper {
     display: flex;
 }
+
+.list {
+    font-size: 19px;
+}

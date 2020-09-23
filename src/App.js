@@ -122,7 +122,9 @@ class App extends React.Component {
                                     className="task-wrapper flex wrapper"
                                 >
                                     <div style={{ flex: 7 }}>
-                                        <span>{task.title}</span>
+                                        <span className="list">
+                                            {task.title}
+                                        </span>
                                     </div>
                                 </div>
                             );
