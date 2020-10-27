@@ -10,7 +10,7 @@ class App extends React.Component {
             activeItem: {
                 id: null,
                 title: "",
-                completed: false,
+                completed: true,
             },
             editing: false,
         };
@@ -123,6 +123,7 @@ class App extends React.Component {
                                 >
                                     <div style={{ flex: 7 }}>
                                         <span className="list">
+                                            <br />
                                             {task.title}
                                         </span>
                                     </div>
